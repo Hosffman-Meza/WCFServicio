@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:51711/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:51711/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:51711/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_viewListTipoServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:viewListTipoServicio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_viewListTipoServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:viewListTipoServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_viewListUbicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:viewListUbicacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_viewListUbicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:viewListUbicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_viewListServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:viewListServicio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_viewListServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:viewListServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_viewListClientes_InputMessage">
+    <wsdl:part name="parameters" element="tns:viewListClientes" />
+  </wsdl:message>
+  <wsdl:message name="IService1_viewListClientes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:viewListClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_viewListClientesActivos_InputMessage">
+    <wsdl:part name="parameters" element="tns:viewListClientesActivos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_viewListClientesActivos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:viewListClientesActivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insertTipoServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertTipoServicio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insertTipoServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertTipoServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insertUbicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertUbicacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insertUbicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertUbicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insertServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertServicio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insertServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insertCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertCliente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insertCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateTipoServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateTipoServicio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateTipoServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateTipoServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateUbicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateUbicacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateUbicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateUbicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateServicio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateCliente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteTipoServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteTipoServicio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteTipoServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteTipoServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteUbicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUbicacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteUbicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUbicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteServicio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCliente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selectOneTipoServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:selectOneTipoServicio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selectOneTipoServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selectOneTipoServicioResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="viewListTipoServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/viewListTipoServicio" message="tns:IService1_viewListTipoServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/viewListTipoServicioResponse" message="tns:IService1_viewListTipoServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="viewListUbicacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/viewListUbicacion" message="tns:IService1_viewListUbicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/viewListUbicacionResponse" message="tns:IService1_viewListUbicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="viewListServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/viewListServicio" message="tns:IService1_viewListServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/viewListServicioResponse" message="tns:IService1_viewListServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="viewListClientes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/viewListClientes" message="tns:IService1_viewListClientes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/viewListClientesResponse" message="tns:IService1_viewListClientes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="viewListClientesActivos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/viewListClientesActivos" message="tns:IService1_viewListClientesActivos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/viewListClientesActivosResponse" message="tns:IService1_viewListClientesActivos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertTipoServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insertTipoServicio" message="tns:IService1_insertTipoServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insertTipoServicioResponse" message="tns:IService1_insertTipoServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertUbicacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insertUbicacion" message="tns:IService1_insertUbicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insertUbicacionResponse" message="tns:IService1_insertUbicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insertServicio" message="tns:IService1_insertServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insertServicioResponse" message="tns:IService1_insertServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insertCliente" message="tns:IService1_insertCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insertClienteResponse" message="tns:IService1_insertCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateTipoServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateTipoServicio" message="tns:IService1_updateTipoServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateTipoServicioResponse" message="tns:IService1_updateTipoServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUbicacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateUbicacion" message="tns:IService1_updateUbicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateUbicacionResponse" message="tns:IService1_updateUbicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateServicio" message="tns:IService1_updateServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateServicioResponse" message="tns:IService1_updateServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateCliente" message="tns:IService1_updateCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateClienteResponse" message="tns:IService1_updateCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteTipoServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteTipoServicio" message="tns:IService1_deleteTipoServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteTipoServicioResponse" message="tns:IService1_deleteTipoServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteUbicacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteUbicacion" message="tns:IService1_deleteUbicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteUbicacionResponse" message="tns:IService1_deleteUbicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteServicio" message="tns:IService1_deleteServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteServicioResponse" message="tns:IService1_deleteServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteCliente" message="tns:IService1_deleteCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteClienteResponse" message="tns:IService1_deleteCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selectOneTipoServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/selectOneTipoServicio" message="tns:IService1_selectOneTipoServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/selectOneTipoServicioResponse" message="tns:IService1_selectOneTipoServicio_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewListTipoServicio">
+      <soap:operation soapAction="http://tempuri.org/IService1/viewListTipoServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewListUbicacion">
+      <soap:operation soapAction="http://tempuri.org/IService1/viewListUbicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewListServicio">
+      <soap:operation soapAction="http://tempuri.org/IService1/viewListServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewListClientes">
+      <soap:operation soapAction="http://tempuri.org/IService1/viewListClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewListClientesActivos">
+      <soap:operation soapAction="http://tempuri.org/IService1/viewListClientesActivos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertTipoServicio">
+      <soap:operation soapAction="http://tempuri.org/IService1/insertTipoServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertUbicacion">
+      <soap:operation soapAction="http://tempuri.org/IService1/insertUbicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertServicio">
+      <soap:operation soapAction="http://tempuri.org/IService1/insertServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCliente">
+      <soap:operation soapAction="http://tempuri.org/IService1/insertCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTipoServicio">
+      <soap:operation soapAction="http://tempuri.org/IService1/updateTipoServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUbicacion">
+      <soap:operation soapAction="http://tempuri.org/IService1/updateUbicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateServicio">
+      <soap:operation soapAction="http://tempuri.org/IService1/updateServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCliente">
+      <soap:operation soapAction="http://tempuri.org/IService1/updateCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteTipoServicio">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteTipoServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUbicacion">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteUbicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteServicio">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCliente">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectOneTipoServicio">
+      <soap:operation soapAction="http://tempuri.org/IService1/selectOneTipoServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:51711/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

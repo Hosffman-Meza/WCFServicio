@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCFService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfSP_Select_TipoServicio_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SP_Select_TipoServicio_Result" nillable="true" type="tns:SP_Select_TipoServicio_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSP_Select_TipoServicio_Result" nillable="true" type="tns:ArrayOfSP_Select_TipoServicio_Result" />
+  <xs:complexType name="SP_Select_TipoServicio_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdTipoServicio" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SP_Select_TipoServicio_Result" nillable="true" type="tns:SP_Select_TipoServicio_Result" />
+  <xs:complexType name="ArrayOfSP_Select_Ubicacion_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SP_Select_Ubicacion_Result" nillable="true" type="tns:SP_Select_Ubicacion_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSP_Select_Ubicacion_Result" nillable="true" type="tns:ArrayOfSP_Select_Ubicacion_Result" />
+  <xs:complexType name="SP_Select_Ubicacion_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdMaestro" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUbicacion" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SP_Select_Ubicacion_Result" nillable="true" type="tns:SP_Select_Ubicacion_Result" />
+  <xs:complexType name="ArrayOfverServicio_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="verServicio_Result" nillable="true" type="tns:verServicio_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfverServicio_Result" nillable="true" type="tns:ArrayOfverServicio_Result" />
+  <xs:complexType name="verServicio_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Coste_Base" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre_de_Servicio" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="verServicio_Result" nillable="true" type="tns:verServicio_Result" />
+  <xs:complexType name="ArrayOfverClientes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="verClientes_Result" nillable="true" type="tns:verClientes_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfverClientes_Result" nillable="true" type="tns:ArrayOfverClientes_Result" />
+  <xs:complexType name="verClientes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Apellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ubicacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zona" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="verClientes_Result" nillable="true" type="tns:verClientes_Result" />
+  <xs:complexType name="ArrayOfverClientesActivos_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="verClientesActivos_Result" nillable="true" type="tns:verClientesActivos_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfverClientesActivos_Result" nillable="true" type="tns:ArrayOfverClientesActivos_Result" />
+  <xs:complexType name="verClientesActivos_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Apellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo_de_Ubicacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ubicacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zona" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="verClientesActivos_Result" nillable="true" type="tns:verClientesActivos_Result" />
+  <xs:complexType name="SP_In_TipoServicio_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SP_In_TipoServicio_Result" nillable="true" type="tns:SP_In_TipoServicio_Result" />
+  <xs:complexType name="SP_In_Ubicacion_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SP_In_Ubicacion_Result" nillable="true" type="tns:SP_In_Ubicacion_Result" />
+  <xs:complexType name="SP_In_Servicio_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SP_In_Servicio_Result" nillable="true" type="tns:SP_In_Servicio_Result" />
+  <xs:complexType name="SP_In_Cliente_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SP_In_Cliente_Result" nillable="true" type="tns:SP_In_Cliente_Result" />
+  <xs:complexType name="SP_Up_TipoServicio_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SP_Up_TipoServicio_Result" nillable="true" type="tns:SP_Up_TipoServicio_Result" />
+  <xs:complexType name="SP_Up_Ubicacion_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SP_Up_Ubicacion_Result" nillable="true" type="tns:SP_Up_Ubicacion_Result" />
+  <xs:complexType name="SP_Up_Servicio_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SP_Up_Servicio_Result" nillable="true" type="tns:SP_Up_Servicio_Result" />
+  <xs:complexType name="SP_Up_Cliente_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SP_Up_Cliente_Result" nillable="true" type="tns:SP_Up_Cliente_Result" />
+  <xs:complexType name="SP_Del_TipoServicio_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SP_Del_TipoServicio_Result" nillable="true" type="tns:SP_Del_TipoServicio_Result" />
+  <xs:complexType name="SP_Del_Ubicacion_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SP_Del_Ubicacion_Result" nillable="true" type="tns:SP_Del_Ubicacion_Result" />
+  <xs:complexType name="SP_Del_Servicio_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SP_Del_Servicio_Result" nillable="true" type="tns:SP_Del_Servicio_Result" />
+  <xs:complexType name="SP_Del_Cliente_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SP_Del_Cliente_Result" nillable="true" type="tns:SP_Del_Cliente_Result" />
+  <xs:complexType name="SP_selectOne_TipoServicio_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdTipoServicio" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SP_selectOne_TipoServicio_Result" nillable="true" type="tns:SP_selectOne_TipoServicio_Result" />
+</xs:schema>

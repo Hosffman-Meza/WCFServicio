@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BDServicioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="SP_Del_Cliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdCliente" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_Del_Servicio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdServicio" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_Del_TipoServicio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdTipoServicio" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_Del_Ubicacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdUbicacion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_In_Cliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="Apellido" Type="nvarchar" Mode="In" />
+          <Parameter Name="Telefono" Type="char" Mode="In" />
+          <Parameter Name="Tipo" Type="nvarchar" Mode="In" />
+          <Parameter Name="Estado" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_In_Servicio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdTipoServicio" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="CostoBase" Type="money" Mode="In" />
+        </Function>
+        <Function Name="SP_In_TipoServicio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Descripcion" Type="nvarchar" Mode="In" />
+          <Parameter Name="Estado" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="SP_In_Ubicacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdMaestro" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="Tipo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Select_TipoServicio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Select_Ubicacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_selectOne_Cliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_selectOne_Servicio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_selectOne_TipoServicio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_selectOne_Ubicacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_Up_Cliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdCliente" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="Apellido" Type="nvarchar" Mode="In" />
+          <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+          <Parameter Name="Tipo" Type="nvarchar" Mode="In" />
+          <Parameter Name="Estado" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Up_Servicio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdServicio" Type="int" Mode="In" />
+          <Parameter Name="IdTipoServicio" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="CostoBase" Type="money" Mode="In" />
+        </Function>
+        <Function Name="SP_Up_TipoServicio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdTipoServicio" Type="int" Mode="In" />
+          <Parameter Name="Descripcion" Type="nvarchar" Mode="In" />
+          <Parameter Name="Estado" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="SP_Up_Ubicacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdMaestro" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="Tipo" Type="nvarchar" Mode="In" />
+          <Parameter Name="IdUbicacion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="verClientes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="verClientesActivos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="verServicio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="BDServicioModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BDServicioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="BDServicioEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="SP_Select_TipoServicio_Result" ReturnType="Collection(BDServicioModel.SP_Select_TipoServicio_Result)" />
+          <FunctionImport Name="SP_Select_Ubicacion_Result" ReturnType="Collection(BDServicioModel.SP_Select_Ubicacion_Result)" />
+          <FunctionImport Name="verClientes_Result" ReturnType="Collection(BDServicioModel.verClientes_Result)" />
+          <FunctionImport Name="verClientesActivos_Result" ReturnType="Collection(BDServicioModel.verClientesActivos_Result)" />
+          <FunctionImport Name="verServicio_Result" ReturnType="Collection(BDServicioModel.verServicio_Result)" />
+          <FunctionImport Name="SP_In_Ubicacion_Result" ReturnType="Collection(BDServicioModel.SP_In_Ubicacion_Result)">
+            <Parameter Name="IdMaestro" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Tipo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Del_Cliente_Result" ReturnType="Collection(BDServicioModel.SP_Del_Cliente_Result)">
+          <Parameter Name="IdCliente" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Del_Servicio_Result" ReturnType="Collection(BDServicioModel.SP_Del_Servicio_Result)">
+          <Parameter Name="IdServicio" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Del_TipoServicio_Result" ReturnType="Collection(BDServicioModel.SP_Del_TipoServicio_Result)">
+          <Parameter Name="IdTipoServicio" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Del_Ubicacion_Result" ReturnType="Collection(BDServicioModel.SP_Del_Ubicacion_Result)">
+          <Parameter Name="IdUbicacion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_In_Cliente_Result" ReturnType="Collection(BDServicioModel.SP_In_Cliente_Result)">
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Apellido" Mode="In" Type="String" />
+            <Parameter Name="Telefono" Mode="In" Type="String" />
+            <Parameter Name="Tipo" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_In_Servicio_Result" ReturnType="Collection(BDServicioModel.SP_In_Servicio_Result)">
+            <Parameter Name="IdTipoServicio" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="CostoBase" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="SP_In_TipoServicio_Result" ReturnType="Collection(BDServicioModel.SP_In_TipoServicio_Result)">
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Up_Cliente_Result" ReturnType="Collection(BDServicioModel.SP_Up_Cliente_Result)">
+            <Parameter Name="IdCliente" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Apellido" Mode="In" Type="String" />
+            <Parameter Name="Telefono" Mode="In" Type="String" />
+            <Parameter Name="Tipo" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Up_Servicio_Result" ReturnType="Collection(BDServicioModel.SP_Up_Servicio_Result)">
+            <Parameter Name="IdServicio" Mode="In" Type="Int32" />
+            <Parameter Name="IdTipoServicio" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="CostoBase" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Up_TipoServicio_Result" ReturnType="Collection(BDServicioModel.SP_Up_TipoServicio_Result)">
+            <Parameter Name="IdTipoServicio" Mode="In" Type="Int32" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Up_Ubicacion_Result" ReturnType="Collection(BDServicioModel.SP_Up_Ubicacion_Result)">
+            <Parameter Name="IdMaestro" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Tipo" Mode="In" Type="String" />
+            <Parameter Name="IdUbicacion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_selectOne_TipoServicio_Result" ReturnType="Collection(BDServicioModel.SP_selectOne_TipoServicio_Result)">
+          <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="SP_Select_TipoServicio_Result">
+          <Property Type="Int32" Name="IdTipoServicio" Nullable="false" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="Estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_Select_Ubicacion_Result">
+          <Property Type="Int32" Name="IdUbicacion" Nullable="false" />
+          <Property Type="Int32" Name="IdMaestro" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Tipo" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="verClientes_Result">
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Telefono" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="Tipo" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Direccion" Nullable="false" MaxLength="300" />
+          <Property Type="String" Name="Zona" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ubicacion" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="verClientesActivos_Result">
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Tipo" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Telefono" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="Direccion" Nullable="false" MaxLength="300" />
+          <Property Type="String" Name="Zona" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ubicacion" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Tipo_de_Ubicacion" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="verServicio_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Nombre_de_Servicio" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Coste_Base" Nullable="true" Precision="19" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="Estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_In_Ubicacion_Result">
+          <Property Type="Int32" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_Del_Cliente_Result">
+          <Property Type="Int32" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_Del_Servicio_Result">
+          <Property Type="Int32" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_Del_TipoServicio_Result">
+          <Property Type="Int32" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_Del_Ubicacion_Result">
+          <Property Type="Int32" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_In_Cliente_Result">
+          <Property Type="Int32" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_In_Servicio_Result">
+          <Property Type="Int32" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_In_TipoServicio_Result">
+          <Property Type="Int32" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_Up_Cliente_Result">
+          <Property Type="Int32" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_Up_Servicio_Result">
+          <Property Type="Int32" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_Up_TipoServicio_Result">
+          <Property Type="Int32" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_Up_Ubicacion_Result">
+          <Property Type="Int32" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_selectOne_TipoServicio_Result">
+          <Property Type="Int32" Name="IdTipoServicio" Nullable="false" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="Estado" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BDServicioModelStoreContainer" CdmEntityContainer="BDServicioEntities" >
+          <FunctionImportMapping FunctionImportName="SP_Select_TipoServicio_Result" FunctionName="BDServicioModel.Store.SP_Select_TipoServicio">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.SP_Select_TipoServicio_Result">
+                <ScalarProperty Name="IdTipoServicio" ColumnName="IdTipoServicio" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Select_Ubicacion_Result" FunctionName="BDServicioModel.Store.SP_Select_Ubicacion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.SP_Select_Ubicacion_Result">
+                <ScalarProperty Name="IdUbicacion" ColumnName="IdUbicacion" />
+                <ScalarProperty Name="IdMaestro" ColumnName="IdMaestro" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="verClientes_Result" FunctionName="BDServicioModel.Store.verClientes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.verClientes_Result">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Zona" ColumnName="Zona" />
+                <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="verClientesActivos_Result" FunctionName="BDServicioModel.Store.verClientesActivos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.verClientesActivos_Result">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Zona" ColumnName="Zona" />
+                <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+                <ScalarProperty Name="Tipo_de_Ubicacion" ColumnName="Tipo de Ubicacion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="verServicio_Result" FunctionName="BDServicioModel.Store.verServicio">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.verServicio_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nombre_de_Servicio" ColumnName="Nombre de Servicio" />
+                <ScalarProperty Name="Coste_Base" ColumnName="Coste Base" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_In_Ubicacion_Result" FunctionName="BDServicioModel.Store.SP_In_Ubicacion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.SP_In_Ubicacion_Result">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Del_Cliente_Result" FunctionName="BDServicioModel.Store.SP_Del_Cliente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.SP_Del_Cliente_Result">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Del_Servicio_Result" FunctionName="BDServicioModel.Store.SP_Del_Servicio">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.SP_Del_Servicio_Result">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Del_TipoServicio_Result" FunctionName="BDServicioModel.Store.SP_Del_TipoServicio">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.SP_Del_TipoServicio_Result">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Del_Ubicacion_Result" FunctionName="BDServicioModel.Store.SP_Del_Ubicacion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.SP_Del_Ubicacion_Result">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_In_Cliente_Result" FunctionName="BDServicioModel.Store.SP_In_Cliente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.SP_In_Cliente_Result">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_In_Servicio_Result" FunctionName="BDServicioModel.Store.SP_In_Servicio">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.SP_In_Servicio_Result">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_In_TipoServicio_Result" FunctionName="BDServicioModel.Store.SP_In_TipoServicio">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.SP_In_TipoServicio_Result">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Up_Cliente_Result" FunctionName="BDServicioModel.Store.SP_Up_Cliente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.SP_Up_Cliente_Result">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Up_Servicio_Result" FunctionName="BDServicioModel.Store.SP_Up_Servicio">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.SP_Up_Servicio_Result">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Up_TipoServicio_Result" FunctionName="BDServicioModel.Store.SP_Up_TipoServicio">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.SP_Up_TipoServicio_Result">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Up_Ubicacion_Result" FunctionName="BDServicioModel.Store.SP_Up_Ubicacion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.SP_Up_Ubicacion_Result">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_selectOne_TipoServicio_Result" FunctionName="BDServicioModel.Store.SP_selectOne_TipoServicio">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDServicioModel.SP_selectOne_TipoServicio_Result">
+                <ScalarProperty Name="IdTipoServicio" ColumnName="IdTipoServicio" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
